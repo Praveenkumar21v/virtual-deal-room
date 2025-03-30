@@ -85,7 +85,7 @@ export default function Sidebar() {
         </nav>
         {user && (
           <div className="flex items-center mt-4 cursor-pointer" onClick={() => setProfileOpen(true)}>
-            <Avatar className="mr-2" style={{ backgroundColor: avatarColor }}>
+            <Avatar className="mr-2" style={{ color: avatarColor }}>
               <AvatarFallback>{user.email.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <span>{user.email.split('@')[0]}</span>
