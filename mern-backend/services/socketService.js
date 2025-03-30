@@ -7,9 +7,8 @@ const { redisClient } = require('../config/redis');
 let io;
 
 exports.init = (server) => {
-  console.log('Initializing Socket.IO with CORS origin:', process.env.CLIENT_URL);
   io = socketio(server, {
-    cors: { origin: process.env.CLIENT_URL, methods: ['GET', 'POST'], credentials: true },
+    cors: { origin:"https://client-deal-room-373024329505.us-central1.run.app", methods: ['GET', 'POST'], credentials: true },
   });
 
   io.use(async (socket, next) => {
