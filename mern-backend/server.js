@@ -57,7 +57,7 @@ const startServer = async () => {
     await connectRedis();
     console.log('Connected to Redis');
 
-    const PORT = process.env.PORT || 8080;
+    const PORT = process.env.BACKEND_PORT || 8080;
     server.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
