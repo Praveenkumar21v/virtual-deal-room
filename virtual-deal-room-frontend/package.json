@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "if [ \"$USE_LEGACY_PEER_DEPS\" = \"true\" ]; then npm install --legacy-peer-deps && next build; else npm install && next build; fi",
     "start": "next start",
     "lint": "next lint"
   },
