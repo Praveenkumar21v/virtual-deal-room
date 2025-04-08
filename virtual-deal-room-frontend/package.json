@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "[ \"$USE_LEGACY_PEER_DEPS\" = \"true\" ] && npm install --legacy-peer-deps && next build || npm install && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm install react-loader-spinner@6.1.6 --legacy-peer-deps"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
